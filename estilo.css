@@ -1,0 +1,175 @@
+body{
+    font-family: 'japa', Courier, monospace;
+ 
+}
+body::before{
+    content: '';
+    background-image: url("yuyu.img/gifffffff.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+}
+main{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.cabecalho 
+{
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+
+}
+.cabecalho .titulo{
+ color: var(--cor-titulo-fraco);
+ text-transform: uppercase;
+ font-size: 60px;
+ line-height: 102px;
+ -webkit-text-stroke: 2px var(--cor-titulo-forte);
+ animation: text-glowing-black .5s ease-in-out infinite;
+    animation-direction: alternate-reverse;
+
+}
+
+.selecao-personagens{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.selecao-personagens .personagem-grande{
+    text-align: center;
+    width: 40%;
+    height: 70vh;
+position: relative;
+
+}
+.selecao-personagens .personagem-grande img{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+ 
+.selecao-personagens .personagem-grande .nome ::before{
+
+    content: '';
+    height: 15px;
+    width: 100%;
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    
+    
+
+}
+.selecao-personagens .personagem-grande.personagen-jogador-1 .nome ::before{
+    background-color: var(--cor-azul-principal);
+  
+}
+.selecao-personagens .personagem-grande.personagen-jogador-2 .nome ::before{
+    background-color: var(--cor-vermelha-principal);
+  
+   
+}
+
+
+.selecao-personagens .personagem-grande .nome h2{
+color: rgb(137, 28, 192);
+font-family: 'command',sans-serif;
+position: absolute;
+bottom: -15px;
+width: 100%;
+font-size: 27px;
+box-shadow: 0.5px;
+animation: text-glowing-withe .3s ease-in-out infinite;
+    animation-direction: alternate;
+
+}
+
+.selecao-personagens .lista-de-personagens{
+    display:flex ;
+    flex-wrap: wrap;
+    max-width: 600px;
+    justify-content: center;
+    gap: 12px;
+}
+.selecao-personagens .lista-de-personagens .personagem{
+
+    border: 2px solid var(--cor-padrao);
+    background-color: var(--cor-padrao);
+    width: 30%;
+    height: 160px;
+    cursor: pointer;
+    z-index: 2;
+    border-radius: 5px;
+    position: relative;
+    transition: 0,15s ease-in-out;
+}
+.selecao-personagens .lista-de-personagens .personagem img{
+    height: 100%;
+    width: 100%;
+    border-radius: 8px;
+}
+.selecao-personagens .lista-de-personagens .personagem.selecionado{
+
+    border: 2px solid var(--cor-azul-media) ;
+    animation: c-glowing-blue .3s ease-in-out infinite;
+    animation-direction: alternate;
+}
+.selecao-personagens .lista-de-personagens .personagem:hover{
+    animation: c-glowing-blue .3s ease-in-out infinite;
+    animation-direction: alternate;
+    transform: scale(1.07);
+    z-index: 2 ;
+}
+.selecao-personagens .lista-de-personagens .personagem.jogador-2-selecionado{
+
+    border: 2px solid var(--cor-azul-media) ;
+    animation: c-glowing-red .3s ease-in-out infinite;
+    animation-direction: alternate;
+}
+.selecao-personagens .lista-de-personagens .personagem.jogador-2-selecionado:hover{
+    animation: c-glowing-red .3s ease-in-out infinite;
+    animation-direction: alternate;
+}
+.selecao-personagens .lista-de-personagens .personagem .tag{
+    display: none;
+    font-family: 'Times New Roman', Times, serif;
+    position: absolute;
+    top: 5px;
+    left:5px;
+    color: var(--cor-azul-media);
+    transition: opacity .3s ease-in-out;
+    animation: alternate;
+    animation: text-glowing-blue .3s ease-in-out infinite;
+    animation-direction: alternate;
+
+}
+
+    .selecao-personagens .lista-de-personagens .personagem.selecionado .tag{
+        display: block;
+        animation: text-glowing-blue .3s ease-in-out infinite;
+        animation-direction: alternate;
+
+    }
+    .selecao-personagens .lista-de-personagens .personagem.jogador-2-selecionado .tag{
+        display: block;
+        animation: text-glowing-red .3s ease-in-out infinite;
+        animation-direction: alternate;
+
+    }
+
+    .player1{
+        height: 400px;
+        width: 380px;
+    }
+    .player2{
+        height: 400px;
+        width: 380px;
+        
+    }
